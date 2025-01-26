@@ -35,7 +35,7 @@ let winningPatterns = [
 
 let checkWiner = () => {
    for (const patterns of winningPatterns) {
-    if(count<=7){
+    if(count<=8){
     if(patterns[0].innerHTML == 'O' && patterns[1].innerHTML =='O' && patterns[2].innerHTML == 'O'){
         display.innerHTML = "'O' IS WINNER";
         patterns[0].style.backgroundColor ="rgba(5, 5, 56, 0.962)";
