@@ -54,7 +54,7 @@ let checkWiner = () => {
           }
       });
 
-    }
+    } 
        else{
         display.innerHTML = "DRAW";
        }
