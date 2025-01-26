@@ -43,7 +43,8 @@
     border: 0;
     box-shadow: 10px 10px 10px 1px rgb(51, 30, 30);
     color: black;
-    border-radius: 7px;
+    border-radius: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT';
 }
 .div:hover{
     cursor: pointer;
@@ -90,8 +91,9 @@ button:hover{
     }
     .div{
         width: 30%;
+        font-size: 450%;
+        padding: 4%;
     }
-   
     .wrapper{
         padding: 5px;
     }
