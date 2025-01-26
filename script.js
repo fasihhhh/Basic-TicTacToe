@@ -36,43 +36,28 @@ let winningPatterns = [
 let checkWiner = () => {
    for (const patterns of winningPatterns) {
     if(count<=8){
-    if(patterns[0].innerHTML == 'O' && patterns[1].innerHTML =='O' && patterns[2].innerHTML == 'O'){
-        display.innerHTML = "'O' IS WINNER";
-        patterns[0].style.backgroundColor ="rgba(5, 5, 56, 0.962)";
-        patterns[1].style.backgroundColor ="rgba(5, 5, 56, 0.962)";
-        patterns[2].style.backgroundColor ="rgba(5, 5, 56, 0.962)";
-        patterns[0].style.color ="white";
-        patterns[1].style.color ="white";
-        patterns[2].style.color ="white";
-        main.style.pointerEvents = "none";
-        // resetFuntion();
+        patterns.forEach(eachDivFromPattern => {
+
+          if(patterns[0].innerHTML == 'O' && patterns[1].innerHTML =='O' && patterns[2].innerHTML == 'O'){
+                 display.innerHTML = "'O' IS WINNER";
+                 eachDivFromPattern.style.backgroundColor ="rgba(5, 5, 56, 0.962)";
+                 eachDivFromPattern.style.color ="white";
+                 main.style.pointerEvents = "none";
+              // resetFuntion();
+          }
+          else if(patterns[0].innerHTML == 'X' && patterns[1].innerHTML =='X' && patterns[2].innerHTML == 'X'){
+                 display.innerHTML = "'O' IS WINNER";
+                 eachDivFromPattern.style.backgroundColor ="rgba(5, 5, 56, 0.962)";
+                 eachDivFromPattern.style.color ="white";
+                 main.style.pointerEvents = "none";
+              // resetFuntion();
+          }
+      });
+
     }
-    else if(patterns[0].innerHTML == 'X' && patterns[1].innerHTML =='X' && patterns[2].innerHTML == 'X'){
-        display.innerHTML = "'X' IS WINNER";
-        // for (const i of patterns) {
-        //     patterns[i].style.backgroundColor ="rgba(5, 5, 56, 0.962)";
-        //     patterns[i].style.color ="white";
-        //     patterns[i].style.pointerEvents = "none";
-
-        // }
-        patterns[0].style.backgroundColor ="rgba(5, 5, 56, 0.962)";
-        patterns[1].style.backgroundColor ="rgba(5, 5, 56, 0.962)";
-        patterns[2].style.backgroundColor ="rgba(5, 5, 56, 0.962)";
-        patterns[0].style.color ="white";
-        patterns[1].style.color ="white";
-        patterns[2].style.color ="white";
-        patterns[0].style.pointerEvents = "none";
-        patterns[1].style.pointerEvents = "none";
-        patterns[2].style.pointerEvents = "none";
-        main.style.pointerEvents = "none";
-
-        // resetFuntion();
-    }
-}
-else{
-    display.innerHTML = "DRAW";
-}
-
+       else{
+        display.innerHTML = "DRAW";
+       }
    }
 }
 let resetFuntion = () => {
