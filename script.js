@@ -46,7 +46,7 @@ let checkWiner = () => {
               // resetFuntion();
           }
           else if(patterns[0].innerHTML == 'X' && patterns[1].innerHTML =='X' && patterns[2].innerHTML == 'X'){
-                 display.innerHTML = "'O' IS WINNER";
+                 display.innerHTML = "'X' IS WINNER";
                  eachDivFromPattern.style.backgroundColor ="rgba(5, 5, 56, 0.962)";
                  eachDivFromPattern.style.color ="white";
                  main.style.pointerEvents = "none";
